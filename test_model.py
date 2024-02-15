@@ -20,11 +20,11 @@ print("ŷ =" + str(model.intercept_[0]) + " + " + str(model.coef_.T[0][0]) + " x
 y_pred = model.predict(x)
 mae = mean_absolute_error(y, y_pred)
 
-"""plt.scatter(x, y, color='black')
+plt.scatter(x, y, color='black')
 plt.plot(x, y_pred, color='blue', linewidth=3)
 plt.plot(x, y_pred + mae, color='lightgray')
 plt.plot(x, y_pred - mae, color='lightgray')
-plt.show()"""
+plt.show()
 
 corr, pval = pearsonr(x[:,0], y[:,0])
 print(corr)         # > 0 => Positive association
